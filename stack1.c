@@ -47,7 +47,7 @@ void pop(stack_t **stack, unsigned int line_number)
 stack_t *tmp;
 if (*stack == NULL)
 {
-_error(": can't pop, an empty stack", line_number);
+_error(": can't pop an empty stack", line_number);
 return;
 }
 tmp = *stack;
