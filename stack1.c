@@ -70,7 +70,7 @@ h = *stack;
 (void)line_number;
 while (h)
 {
-printf("%d\n", h->n);
+printf("%i\n", h->n);
 h = h->next;
 }
 }
