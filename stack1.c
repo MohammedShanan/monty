@@ -75,7 +75,7 @@ h = h->next;
 }
 }
 /**
- * swaps - swaps the top two elements of the stack
+ * swap - swaps the top two elements of the stack
  * @stack: stack
  * @line_number: opcode line number
  */

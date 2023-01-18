@@ -7,7 +7,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <sys/stat.h>
-int status;
+extern int status;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer

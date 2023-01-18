@@ -43,7 +43,7 @@ void parse_line(char *line, unsigned int line_num, stack_t **stack)
 {
 char *opcode, *arg;
 static char id = 's';
-void (*fun)(stack_t * *stack, unsigned int line_number);
+void (*fun)(stack_t  **stack, unsigned int line_number);
 opcode = strtok(line, " \n");
 arg = strtok(NULL, " \n");
 if (strcmp("queue", opcode) == 0 || strcmp("stack", opcode) == 0)

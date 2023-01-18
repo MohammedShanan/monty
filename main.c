@@ -1,5 +1,5 @@
 #include "monty.h"
-int status = EXIT_FAILURE;
+extern int status = EXIT_FAILURE;
 /**
  * main - prints all the values on the stack
  * @argc: argument count
