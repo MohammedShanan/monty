@@ -46,6 +46,10 @@ static char id = 's';
 void (*fun)(stack_t  **stack, unsigned int line_number);
 opcode = strtok(line, " \n");
 arg = strtok(NULL, " \n");
+if (opcode[0] == '#')
+{
+    return;
+}
 if (strcmp("queue", opcode) == 0 || strcmp("stack", opcode) == 0)
 {
 id = strcmp("queue", opcode) == 0 ? 'q' : 's';
