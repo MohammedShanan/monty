@@ -61,7 +61,7 @@ push(stack, line_num, arg, id);
 else
 {
 fun = get_op_func(opcode);
-if (fun == NULL)
+if (fun == NULL && opcode)
 {
 status = EXIT_FAILURE;
 fprintf(stderr, "L%i: unknown instruction %s\n", line_num, opcode);
