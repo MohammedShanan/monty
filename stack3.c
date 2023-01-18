@@ -80,7 +80,9 @@ _error(": division by zero", line_number);
 return;
 }
 node2->n = node2->n / node1->n;
-pop(stack, line_number);
+node2->prev = NULL;
+*stack = node2;
+free(node1);
 }
 /**
  * mod -computes the rest of the
