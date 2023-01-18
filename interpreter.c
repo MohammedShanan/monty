@@ -13,7 +13,6 @@ unsigned int line_num = 1;
 buff = NULL;
 while (getline(&buff, &n, f) != -1)
 {
-buff = remove_spaces(buff);
 parse_line(buff, line_num, &stack);
 check_status(f, buff, stack);
 line_num++;
@@ -45,8 +44,8 @@ void parse_line(char *line, unsigned int line_num, stack_t **stack)
 char *opcode, *arg;
 static char id = 's';
 void (*fun)(stack_t  **stack, unsigned int line_number);
-opcode = strtok(line, " \n");
-arg = strtok(NULL, " \n");
+opcode = strtok(line, " \n\t");
+arg = strtok(NULL, " \n\t");
 if (opcode[0] == '#' ||  opcode == NULL)
 {
 opcode = "nop";
