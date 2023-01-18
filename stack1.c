@@ -47,12 +47,12 @@ void pop(stack_t **stack, unsigned int line_number)
 stack_t *tmp;
 if (*stack == NULL)
 {
-_error(": can't pop, stack empty", line_number);
+_error(": can't pop, stack an empty", line_number);
 return;
 }
 tmp = *stack;
 *stack = (*stack)->next;
-if (*stack != NULL)
+if (tmp->next)
 {
 (*stack)->prev = NULL;
 }
