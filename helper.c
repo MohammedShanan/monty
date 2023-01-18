@@ -112,6 +112,7 @@ void (*get_op_func(char *token))(stack_t **stack, unsigned int line_number)
 instruction_t ops[] = {{"pop", pop},
 {"pall", pall},
 {"pint", pint},
+{"nop", nop},
 {"swap", swap},
 {"add", add},
 {"sup", sub},
