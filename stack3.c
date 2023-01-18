@@ -54,7 +54,9 @@ return;
 node1 = *stack;
 node2 = (*stack)->next;
 node2->n = node2->n * node1->n;
-pop(stack, line_number);
+node2->prev = NULL;
+*stack = node2;
+free(node1);
 }
 /**
  * _div - divides the second top element of the stack
@@ -71,7 +73,7 @@ _error(": can't div, stack too short", line_number);
 return;
 }
 node1 = *stack;
-node2 = (*stack)->next;
+node2 = node1->next;
 if (node1->n == 0)
 {
 _error(": division by zero", line_number);
