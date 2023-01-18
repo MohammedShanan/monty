@@ -45,7 +45,7 @@ tmp = *stack;
 (void)line_number;
 while (tmp)
 {
-if ((tmp->n < 0 || tmp->n > 127) || tmp->n == 0)
+if (!(isascii((*stack)->n)) || tmp->n == 0)
 {
 break;
 }
