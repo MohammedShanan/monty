@@ -13,6 +13,7 @@ unsigned int line_num = 1;
 buff = NULL;
 while (getline(&buff, &n, f) != -1)
 {
+buff = remove_spaces(buff);
 parse_line(buff, line_num, &stack);
 check_status(f, buff, stack);
 line_num++;
@@ -87,4 +88,18 @@ free_dlistint(stack);
 free(buff);
 exit(EXIT_FAILURE);
 }
+}
+/**
+ * remove_spaces - removes leading spaces
+ * @str: buffer containing the line
+ * Return: string with leading spaces removed
+ */
+char *remove_spaces(char *str)
+{
+int i = 0;
+while (*str == ' ')
+{
+str++;
+}
+return (str);
 }

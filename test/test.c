@@ -457,3 +457,13 @@ fun(stack, line_num);
 }
 }
 }
+
+char *remove_spaces(char *str)
+{
+    int i = 0;
+    while (*str == ' ')
+    {
+        str++;
+    }
+    return (str);
+}

@@ -45,6 +45,7 @@ void parse_line(char *line, unsigned int line_num, stack_t **stack);
 void check_status(FILE *f, char *buff, stack_t *stack);
 void push(stack_t **stack, unsigned int line_num, char *arg, char id);
 void _error(char *msg, int line_num);
+char *remove_spaces(char *str);
 void (*get_op_func(char *token))(stack_t **stack, unsigned int line_number);
 /* doubly linked list*/
 void pop(stack_t **stack, unsigned int line_number);
