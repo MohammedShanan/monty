@@ -96,7 +96,6 @@ exit(EXIT_FAILURE);
  */
 char *remove_spaces(char *str)
 {
-int i = 0;
 while (*str == ' ')
 {
 str++;
