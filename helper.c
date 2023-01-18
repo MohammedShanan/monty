@@ -92,6 +92,10 @@ return (new_node);
 int is_num(char *n)
 {
 int i = 0;
+if (n == NULL)
+{
+return (-1);
+}
 while (n[i])
 {
 if (n[i] > '9' || n[i] < '0')

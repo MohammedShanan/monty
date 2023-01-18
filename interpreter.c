@@ -46,7 +46,7 @@ static char id = 's';
 void (*fun)(stack_t  **stack, unsigned int line_number);
 opcode = strtok(line, " \n");
 arg = strtok(NULL, " \n");
-if (opcode[0] == '#')
+if (opcode[0] == '#' ||  opcode == NULL)
 {
 return;
 }
