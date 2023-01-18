@@ -102,6 +102,6 @@ if (node1->n == 0)
 _error(": division by zero", line_number);
 return;
 }
-node2->n = node2->n / node1->n;
+node2->n = node2->n % node1->n;
 pop(stack, line_number);
 }
