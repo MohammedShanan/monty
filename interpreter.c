@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <stdio.h>
 /**
  * interpreter - interpret the file
  * @f: file
