@@ -1,6 +1,4 @@
 #include "monty.h"
-extern int status;
-status = EXIT_FAILURE;
 /**
  * main - prints all the values on the stack
  * @argc: argument count
@@ -10,6 +8,7 @@ status = EXIT_FAILURE;
 int main(int argc, char *argv[])
 {
 FILE *f;
+status = EXIT_SUCCESS;
 if (argc != 2)
 {
 write(2, "USAGE: monty file\n", 18);
