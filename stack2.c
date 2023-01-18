@@ -73,8 +73,8 @@ while (tmp->next)
 {
 tmp = tmp->next;
 }
-*stack = (*stack)->next;
-(*stack)->next->prev = NULL;
+*stack = top_node->next;
+(*stack)->prev = NULL;
 top_node->next = NULL;
 top_node->prev = tmp;
 tmp->next = top_node;
