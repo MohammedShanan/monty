@@ -48,7 +48,7 @@ opcode = strtok(line, " \n");
 arg = strtok(NULL, " \n");
 if (opcode[0] == '#' ||  opcode == NULL)
 {
-return;
+opcode = "nop";
 }
 if (strcmp("queue", opcode) == 0 || strcmp("stack", opcode) == 0)
 {
