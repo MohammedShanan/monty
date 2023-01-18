@@ -45,7 +45,7 @@ tmp = *stack;
 (void)line_number;
 while (tmp)
 {
-if ((*stack)->n > 127 || tmp->n <= 0)
+if (tmp->n > 127 || tmp->n <= 0)
 {
 break;
 }
