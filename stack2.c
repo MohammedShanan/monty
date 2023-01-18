@@ -23,7 +23,7 @@ if (*stack == NULL)
 _error(": can't pchar, stack empty", line_number);
 return;
 }
-if ((*stack)->n >= 0 && (*stack)->n <= 127)
+if ((isascii((*stack)->n)))
 {
 printf("%c\n", (*stack)->n);
 }
